@@ -9,6 +9,7 @@ namespace Banana {
 
         public SceneryMaster scenery;
         public Car garbageCar;
+        public Car ourCar;
         public Gearbox gearboxUI;
 
         public float maxSpeed = 100f;

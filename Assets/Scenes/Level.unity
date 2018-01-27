@@ -666,10 +666,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 597455242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8415586f76efbb4ab886ebc3c361df7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e4794e57128673498d756eb91567b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
 --- !u!212 &597455245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1459,6 +1458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenery: {fileID: 1272474313}
   garbageCar: {fileID: 2053009718}
+  ourCar: {fileID: 597455244}
   gearboxUI: {fileID: 86953443}
   maxSpeed: 100
   minSpeed: 60
