@@ -19,7 +19,7 @@ namespace Banana.Controllers {
 
         public void ChangeSpeed(float speed) {
             foreach (Scenery scenery in groundSceneries) {
-                scenery.speed = speed;
+                scenery.speed = speed * 0.1f;
             }
         }
     }

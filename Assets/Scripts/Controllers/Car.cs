@@ -5,7 +5,8 @@ using UnityEngine;
 namespace Banana.Controllers {
     public class Car : MonoBehaviour {
 
-        public float threshold = 5f;
+        private float currentSpeed;
+        private Vector3 destination;
 
         // Use this for initialization
         void Start() {
@@ -14,13 +15,13 @@ namespace Banana.Controllers {
 
         // Update is called once per frame
         void Update() {
-
+            transform.position = Vector3.Lerp(transform.position, destination, 0.05f);
         }
 
-        public void ChangeSpeed() {
-            Vector3 shift = new Vector3(threshold, 0f, 0f);
-            Vector3 destination = transform.position + shift;
-            transform.position = Vector3.Lerp(transform.position, destination, 0.5f);
+        public void ChangeSpeed(float speed) {
+            float relativeAcceleration = speed - currentSpeed;
+            Vector3 shift = new Vector3(relativeAcceleration * 0.05f, 0f, 0f);
+            destination = transform.position + shift;
         }
     }
 }

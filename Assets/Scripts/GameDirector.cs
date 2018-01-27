@@ -34,6 +34,7 @@ namespace Banana {
             }
             currentSpeed = Random.Range(minSpeed, maxSpeed);
             scenery.ChangeSpeed(currentSpeed);
+            garbageCar.ChangeSpeed(currentSpeed);
             time = Random.Range(3, 10);
             StartCoroutine("ChangeSpeed");
         }
