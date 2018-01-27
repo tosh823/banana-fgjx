@@ -29,7 +29,7 @@ namespace Banana.Controllers {
 
         public void Reposition() {
             Vector3 shifted = transform.position;
-            shifted.x = width;
+            shifted.x = width - 0.2f;
             transform.position = shifted;
         }
     }
