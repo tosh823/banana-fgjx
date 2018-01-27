@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Banana.Controllers {
     public class Car : MonoBehaviour {
 
-        private float currentSpeed;
+        public float currentSpeed = 60f;
         private Vector3 destination;
 
         // Use this for initialization

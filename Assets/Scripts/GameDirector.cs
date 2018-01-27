@@ -9,13 +9,13 @@ namespace Banana {
 
         public SceneryMaster scenery;
         public Car garbageCar;
-        public Car ourCar;
+        public SpeedyCar ourCar;
         public Gearbox gearboxUI;
 
         public float maxSpeed = 100f;
         public float minSpeed = 60f;
 
-        public int time;
+        private int time;
 
         private float currentSpeed;
 
@@ -45,6 +45,7 @@ namespace Banana {
 
         public void ChangeGear(int gear) {
             Debug.Log("Change gear to " + gear);
+            ourCar.currentGear = gear;
         }
     }
 }
