@@ -17,6 +17,7 @@ namespace Banana.UI {
         public Image cgImage;
         public Text scoreText;
         public GameObject startPanel;
+        public GameObject gameOverPanel;
 
         // Use this for initialization
         void Start() {
@@ -66,10 +67,13 @@ namespace Banana.UI {
         public void OnStartPressed() {
             if (OnShifted != null) OnStart();
             startPanel.SetActive(false);
+            gameOverPanel.SetActive(false);
         }
 
         public void ShowGameOverPanel() {
-
+            gameOverPanel.SetActive(true);
+            currentGear = 0;
+            cgImage.enabled = false;
         }
     }
 }
