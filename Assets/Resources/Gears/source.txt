@@ -1,0 +1,3 @@
+Gears are created using the online tool http://geargenerator.com/
+Special thanks to Abel Vincze
+
