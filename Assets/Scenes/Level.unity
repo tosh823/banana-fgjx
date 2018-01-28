@@ -520,7 +520,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222136179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.95, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2021011804}
@@ -548,20 +548,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 2021011806}
     m_ColliderPaths:
-    - - X: 100000000
+    - - X: 99500008
         Y: -3500000
-      - X: -100000000
+      - X: -100499992
         Y: -3500000
-      - X: -100000000
+      - X: -100499992
         Y: -16300000
-      - X: 100000000
+      - X: 99500008
         Y: -16300000
   m_CompositePaths:
     m_Paths:
-    - - {x: 10, y: -0.35}
-      - {x: -10, y: -0.35}
-      - {x: -10, y: -1.63}
-      - {x: 10, y: -1.63}
+    - - {x: 9.950001, y: -0.35}
+      - {x: -10.049999, y: -0.35}
+      - {x: -10.049999, y: -1.63}
+      - {x: 9.950001, y: -1.63}
   m_VertexDistance: 0.0005
 --- !u!50 &222136182
 Rigidbody2D:
@@ -571,7 +571,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222136179}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -733,7 +733,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255400331}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -3265,7 +3265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021011803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.99, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222136180}

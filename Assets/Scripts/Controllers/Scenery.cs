@@ -8,11 +8,13 @@ namespace Banana.Controllers {
         public float speed = 1f;
 
         private CompositeCollider2D cc;
+        private Rigidbody2D rb;
         private float width;
 
         // Use this for initialization
         void Start() {
             cc = GetComponent<CompositeCollider2D>();
+            rb = GetComponent<Rigidbody2D>();
             width = cc.bounds.size.x;
         }
 
@@ -28,9 +30,8 @@ namespace Banana.Controllers {
         }
 
         public void Reposition() {
-            Vector3 shifted = transform.position;
-            shifted.x = width - speed * 0.05f;
-            transform.position = shifted;
+            Vector3 shifted = new Vector3(2 * width - 0.2f, 0f, 0f);
+            transform.position = transform.position + shifted;
         }
     }
 }
