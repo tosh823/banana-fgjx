@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 60
-  currentGear: 0
+  currentGear: -1
 --- !u!212 &597455245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1934,8 +1934,10 @@ MonoBehaviour:
   ourCar: {fileID: 597455244}
   gearboxUI: {fileID: 86953443}
   maxSpeed: 80
-  minSpeed: 40
-  score: 0
+  minSpeed: 20
+  maxChangeTime: 5
+  minChangeTime: 1
+  score: 100
 --- !u!1 &1060050282
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,10 @@ namespace Banana {
 
         public float maxSpeed = 100f;
         public float minSpeed = 60f;
+        public int maxChangeTime = 5;
+        public int minChangeTime = 1;
 
-        public float score = 0f;
+        public float score = 100f;
         private bool isGameOver = true;
 
         private int time;
@@ -48,13 +50,14 @@ namespace Banana {
         }
 
         public void StartGame() {
-            score = 0f;
+            score = 100f;
+            gearboxUI.SetScore(score);
             ourCar.transform.position = ourCarInitialPosition;
             garbageCar.transform.position = garbageCarInitialPosition;
             currentSpeed = Random.Range(minSpeed, maxSpeed);
             scenery.ChangeSpeed(currentSpeed);
             garbageCar.ChangeSpeed(currentSpeed);
-            time = Random.Range(3, 10);
+            time = Random.Range(minChangeTime, maxChangeTime);
             isGameOver = false;
             StartCoroutine("ChangeSpeed");
             StartCoroutine("CheckProgress");
@@ -68,7 +71,7 @@ namespace Banana {
             currentSpeed = Random.Range(minSpeed, maxSpeed);
             scenery.ChangeSpeed(currentSpeed);
             garbageCar.ChangeSpeed(currentSpeed);
-            time = Random.Range(3, 10);
+            time = Random.Range(minChangeTime, maxChangeTime);
             StartCoroutine("ChangeSpeed");
         }
 
@@ -88,8 +91,9 @@ namespace Banana {
             while (!isGameOver) {
                 float scoreModifier = 1f;
                 float distance = Vector3.Distance(garbageCar.transform.position, ourCar.transform.position);
-                scoreModifier = (distance < mostDistance ? 1f + closestDistance / distance : 0f);
+                scoreModifier = (distance < mostDistance ? 1f + closestDistance / distance : -0.5f);
                 score += 1 * scoreModifier;
+                score = Mathf.Clamp(score, 0, score);
                 gearboxUI.SetScore(score);
                 yield return new WaitForSeconds(1f);
             }
