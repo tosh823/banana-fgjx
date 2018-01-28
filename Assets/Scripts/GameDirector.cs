@@ -81,7 +81,9 @@ namespace Banana {
 
         public void GameOver() {
             isGameOver = true;
-            ourCar.currentGear = 0;
+            ourCar.transform.position = ourCarInitialPosition;
+            garbageCar.transform.position = garbageCarInitialPosition;
+            ourCar.currentGear = -1;
             StopCoroutine("ChangeSpeed");
             StopCoroutine("CheckProgress");
             gearboxUI.ShowGameOverPanel();
