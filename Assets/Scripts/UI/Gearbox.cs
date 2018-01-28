@@ -19,9 +19,13 @@ namespace Banana.UI {
         public GameObject startPanel;
         public GameObject gameOverPanel;
 
+        public List<Slot> slots;
+        public int activeSlot = 0;
+
         // Use this for initialization
         void Start() {
             SetScore(0);
+            slots[activeSlot].IsActive = true;
         }
 
         // Update is called once per frame
@@ -51,6 +55,7 @@ namespace Banana.UI {
                         cgImage.SetNativeSize();
                         break;
                 }
+                slots[activeSlot].hasGear = true;
             }
         }
 
@@ -58,6 +63,7 @@ namespace Banana.UI {
             if (OnShifted != null) OnShifted(0);
             currentGear = 0;
             cgImage.enabled = false;
+            slots[activeSlot].hasGear = false;
         }
 
         public void SetScore(float score) {
@@ -74,6 +80,7 @@ namespace Banana.UI {
             gameOverPanel.SetActive(true);
             currentGear = 0;
             cgImage.enabled = false;
+            slots[activeSlot].hasGear = false;
         }
     }
 }

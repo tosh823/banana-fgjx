@@ -8,13 +8,11 @@ namespace Banana.Controllers {
         public float speed = 1f;
 
         private CompositeCollider2D cc;
-        private Rigidbody2D rb;
         private float width;
 
         // Use this for initialization
         void Start() {
             cc = GetComponent<CompositeCollider2D>();
-            rb = GetComponent<Rigidbody2D>();
             width = cc.bounds.size.x;
         }
 
